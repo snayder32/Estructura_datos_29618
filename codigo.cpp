@@ -191,3 +191,19 @@ void CambiarEstadoTransaccion() {
         cout << "ERRORRR No existe transaccion con el ID ingresado." << endl;
     }
 }
+
+// Funcion para mostrar el historial completo de la Lista
+void MostrarHistorial() {
+    if (inicioLista == NULL) {
+        cout << "La lista de transacciones esta vacia." << endl;
+    } 
+	else {
+        NodoTransaccion* actual = inicioLista;
+        cout << "\n HISTORIAL DE TRANSACCIONES EN LA LISTA " << endl;
+        while (actual != NULL) {
+            cout << "ID: " << actual->idTransaccion << " | Cliente: " << actual->nombreCliente 
+			<< " | Prioridad: " << actual->prioridad << " | Estado: " << actual->estado << endl;
+            actual = actual->siguiente;
+        }
+    }
+}
