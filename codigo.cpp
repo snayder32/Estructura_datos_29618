@@ -207,3 +207,70 @@ void MostrarHistorial() {
         }
     }
 }
+
+
+// Funciones encargadas de manejar la Cola de Prioridad
+
+// Esta funcion busca un elemento en la lista, lo saca de ahi y lo mete a la cola ordenandolo por urgencia
+void EncolarConPrioridad() {
+    int idMover;
+    cout << "Ingrese el ID de la transaccion pendiente a procesar: ";
+    cin >> idMover;
+    
+    NodoTransaccion* actualLista = inicioLista;
+    NodoTransaccion* anteriorLista = NULL;
+    NodoTransaccion* nodoMover = NULL;
+    bool encontrado = false;
+    
+    // Primero, buscamos en la lista recorriendo nodo por nodo y lo desenlazamos para llevarnoslo
+    while (actualLista != NULL && encontrado == false) {
+        if (actualLista->idTransaccion == idMover) {
+            encontrado = true;
+            nodoMover = actualLista;
+            if (anteriorLista == NULL) {
+                inicioLista = actualLista->siguiente;
+            } 
+			else {
+                anteriorLista->siguiente = actualLista->siguiente;
+            }
+        } 
+		else {
+            anteriorLista = actualLista;
+            actualLista = actualLista->siguiente;
+        }
+    }
+    
+    // Segundo, ya que lo tenemos separado, lo insertamos en la cola comparando su nivel de prioridad
+    if (encontrado == true) {
+        nodoMover->estado = "En Proceso";
+        nodoMover->siguiente = NULL;
+        
+        if (frenteCola == NULL) {
+            frenteCola = nodoMover;
+            finalCola = nodoMover;
+        } 
+		else {
+            if (nodoMover->prioridad < frenteCola->prioridad) {
+                nodoMover->siguiente = frenteCola;
+                frenteCola = nodoMover;
+            } 
+			else {
+                NodoTransaccion* actualCola = frenteCola;
+                while (actualCola->siguiente != NULL && actualCola->siguiente->prioridad <= nodoMover->prioridad) {
+                    actualCola = actualCola->siguiente;
+                }
+                
+                if (actualCola->siguiente == NULL) {
+                    finalCola = nodoMover;
+                }
+                
+                nodoMover->siguiente = actualCola->siguiente;
+                actualCola->siguiente = nodoMover;
+            }
+        }
+        cout << "Transaccion encolada y ordenada segun su urgencia con exito." << endl;
+    } 
+	else {
+        cout << "ERRORRR Transaccion no encontrada en la lista." << endl;
+    }
+}
