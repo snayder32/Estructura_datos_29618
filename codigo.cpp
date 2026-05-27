@@ -112,3 +112,48 @@ void MostrarPila() {
         }
     }
 }
+
+// Funciones encargadas de manejar la Lista Enlazada
+
+// Funcion para registrar a un nuevo cliente al final de la lista
+void InsertarTransaccion() {
+    int tokenSeguridad = PopAutorizacion(); // Consumimos un token llamando a la pila
+    
+    if (tokenSeguridad == 0) {
+        cout << "ERRORRR No hay tokens disponibles." << endl;
+    } 
+	else {
+        // Reservamos memoria dinamica para el nuevo registro usando la palabra new
+        NodoTransaccion* nuevoNodo = new NodoTransaccion();
+        nuevoNodo->idTransaccion = contadorID++; // Usamos el contador global y luego lo aumentamos
+        
+        cout << "Ingrese DNI del cliente: ";
+        cin >> nuevoNodo->dniCliente;
+        cout << "Ingrese nombre del cliente: ";
+        cin >> nuevoNodo->nombreCliente;
+        cout << "Ingrese tipo de operacion: ";
+        cin >> nuevoNodo->tipoOperacion;
+        cout << "Ingrese el monto: ";
+        cin >> nuevoNodo->monto;
+        cout << "Ingrese prioridad (1: Presencial, 2: Web, 3: Automatico): ";
+        cin >> nuevoNodo->prioridad;
+        
+        nuevoNodo->estado = "Pendiente";
+        
+        // Lo ponemos en NULL porque al ser el ultimo elemento que ingresa, no hay nadie detras de el
+        nuevoNodo->siguiente = NULL; 
+        
+        // Si la lista esta vacia lo ponemos al inicio, si no, buscamos el ultimo lugar disponible
+        if (inicioLista == NULL) {
+            inicioLista = nuevoNodo;
+        } 
+		else {
+            NodoTransaccion* actual = inicioLista;
+            while (actual->siguiente != NULL) {
+                actual = actual->siguiente;
+            }
+            actual->siguiente = nuevoNodo;
+        }
+        cout << "Transaccion registrada. Token consumido: " << tokenSeguridad << endl;
+    }
+}
