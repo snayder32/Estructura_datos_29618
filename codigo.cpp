@@ -70,3 +70,21 @@ int PopAutorizacion() {
     }
     return tokenAsignado;
 }
+
+
+// Funcion Push: Semana 9, sirve para insertar un elemento nuevo
+// poniendolo en la cima de la pila. Le pide al operador el numero de token.
+void PushAutorizacion() {
+    int idRecuperado;
+    cout << "Ingrese el ID del token a devolver (1-15): ";
+    cin >> idRecuperado;
+    
+    NodoAutorizacion* nuevoToken = new NodoAutorizacion();
+    nuevoToken->idAutorizacion = idRecuperado;
+    nuevoToken->siguiente = cimaPila;
+    cimaPila = nuevoToken; // Ahora el nuevo token pasa a ser la nueva cima
+    
+    cout << "Token de seguridad devuelto a la pila exitosamente." << endl;
+}
+
+
