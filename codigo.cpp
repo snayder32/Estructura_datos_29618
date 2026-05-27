@@ -319,3 +319,55 @@ void MostrarCola() {
         }
     }
 }
+int main() {
+    InicializarPila();
+    int opcion;
+    do {
+        cout << "\n********************************************" << endl;
+        cout << "* SISTEMA CENTRAL DE TRANSACCIONES         *" << endl;
+        cout << "********************************************" << endl;
+        cout << "* 1. Registrar transaccion (Usa Lista)     *" << endl;
+        cout << "* 2. Mostrar historial     (Ver Lista)     *" << endl;
+        cout << "* 3. Modificar datos       (Usa Lista)     *" << endl;
+        cout << "* 4. Enviar a ejecucion    (Usa Cola)      *" << endl;
+        cout << "* 5. Mostrar en espera     (Ver Cola)      *" << endl;
+        cout << "* 6. Procesar operacion    (Usa Cola)      *" << endl;
+        cout << "* 7. Devolver token manual (Usa Pila)      *" << endl;
+        cout << "* 8. Mostrar espacios      (Ver Pila)      *" << endl;
+        cout << "* 9. Salir                                 *" << endl;
+        cout << "********************************************" << endl;
+        cout << "Ingrese una opcion: ";
+        cin >> opcion;
+        switch (opcion) {
+            case 1: 
+                InsertarTransaccion(); 
+                break;
+            case 2: 
+                MostrarHistorial(); 
+                break;
+            case 3: 
+                CambiarEstadoTransaccion(); 
+                break;
+            case 4: 
+                EncolarConPrioridad(); 
+                break;
+            case 5: 
+                MostrarCola(); 
+                break;
+            case 6: 
+                DesencolarYEjecutar(); 
+                break;
+            case 7: 
+                PushAutorizacion(); 
+                break;
+            case 8: 
+                MostrarPila(); 
+                break;
+            case 9: 
+                cout << "SALIENDO..." << endl; 
+                break;
+        }
+    } while (opcion != 9);
+    
+    return 0;
+}
