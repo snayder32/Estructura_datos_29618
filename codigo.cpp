@@ -88,3 +88,10 @@ void PushAutorizacion() {
 }
 
 
+// Esta funcion hace el Push pero de forma automatica internamente en el codigo
+void PushAutorizacionAutomatica(int idRecuperado) {
+    NodoAutorizacion* nuevoToken = new NodoAutorizacion();
+    nuevoToken->idAutorizacion = idRecuperado;
+    nuevoToken->siguiente = cimaPila;
+    cimaPila = nuevoToken;
+}
