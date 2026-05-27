@@ -95,3 +95,20 @@ void PushAutorizacionAutomatica(int idRecuperado) {
     nuevoToken->siguiente = cimaPila;
     cimaPila = nuevoToken;
 }
+
+
+// Esta funcion permite visualizar en pantalla los tokens que quedan guardados en la Pila
+void MostrarPila() {
+    if (cimaPila == NULL) {
+        cout << "La pila esta vacia, no hay tokens disponibles." << endl;
+    } 
+	else {
+        NodoAutorizacion* actual = cimaPila;
+        cout << "\n TOKENS DE SEGURIDAD EN LA PILA " << endl;
+        // Recorremos hasta que actual sea NULL, lo que significa que llegamos al limite
+        while (actual != NULL) {
+            cout << "Token Numero: " << actual->idAutorizacion << endl;
+            actual = actual->siguiente;
+        }
+    }
+}
