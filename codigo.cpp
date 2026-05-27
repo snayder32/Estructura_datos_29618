@@ -157,3 +157,37 @@ void InsertarTransaccion() {
         cout << "Transaccion registrada. Token consumido: " << tokenSeguridad << endl;
     }
 }
+
+
+// Funcion para actualizar los datos de un nodo especifico usando punteros
+void CambiarEstadoTransaccion() {
+    int idBuscar;
+    cout << "Ingrese el ID de la transaccion a modificar: ";
+    cin >> idBuscar;
+    
+    NodoTransaccion* actual = inicioLista;
+    bool encontrado = false;
+    
+    // Recorremos la lista hasta encontrar el ID o hasta chocar con el final (NULL)
+    while (actual != NULL && encontrado == false) {
+        if (actual->idTransaccion == idBuscar) {
+            encontrado = true;
+        } 
+		else {
+            actual = actual->siguiente;
+        }
+    }
+    
+    if (encontrado == true) {
+        cout << "Transaccion encontrada. Cliente: " << actual->nombreCliente << endl;
+        cout << "Ingrese el nuevo estado: ";
+        cin >> actual->estado;
+        cout << "Ingrese la nueva prioridad (1, 2 o 3): ";
+        cin >> actual->prioridad;
+        
+        cout << "Los datos de la transaccion han sido actualizados." << endl;
+    } 
+	else {
+        cout << "ERRORRR No existe transaccion con el ID ingresado." << endl;
+    }
+}
