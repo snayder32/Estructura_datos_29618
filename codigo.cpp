@@ -274,3 +274,32 @@ void EncolarConPrioridad() {
         cout << "ERRORRR Transaccion no encontrada en la lista." << endl;
     }
 }
+
+
+// Funcion Desencolar: Saca al primer cliente que esta al frente de la cola, simula su ejecucion y libera memoria
+void DesencolarYEjecutar() {
+    if (frenteCola == NULL) {
+        cout << "ERRORR La cola de ejecucion esta vacia." << endl;
+    } 
+	else {
+        NodoTransaccion* nodoEjecutar = frenteCola;
+        frenteCola = frenteCola->siguiente;
+        
+        // Validacion clave si sacamos al ultimo elemento de la cola, el puntero finalCola 
+        // no puede quedarse apuntando a basura, debemos regresarlo a NULL
+        if (frenteCola == NULL) {
+            finalCola = NULL;
+        }
+        
+        cout << "\n EJECUTANDO TRANSACCION " << endl;
+        cout << "ID: " << nodoEjecutar->idTransaccion << " | Cliente: " << nodoEjecutar->nombreCliente << endl;
+        cout << "Operacion: " << nodoEjecutar->tipoOperacion << " | Monto procesado: " << nodoEjecutar->monto << endl;
+        
+        // Simulamos que al terminar el tramite, devolvemos un token a la pila el ID 1 de ejemplo
+        PushAutorizacionAutomatica(1); 
+        
+        // Eliminamos el nodo con delete para limpiar el espacio utilizado en la memoria
+        delete nodoEjecutar; 
+        cout << "Transaccion finalizada. Memoria liberada y token devuelto a la pila." << endl;
+    }
+}
