@@ -1,0 +1,173 @@
+[33mcommit 3cc7087d09a4768131a80feecf8c7a74f5cff32b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 17:23:05 2026 -0500
+
+    se implementó el menú principal con el bucle do-while y el switch para la interacción del usuario
+
+[33mcommit 8cf064cab75d7987150535cdc56dc2ea4e233ac8[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 17:21:32 2026 -0500
+
+    se añadió la función mostrar para visualizar el contenido actual de la cola de procesos
+
+[33mcommit 6bfd863df598edbee95e3d8c2d779253caea4a9a[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 17:18:30 2026 -0500
+
+    se implementó la función desencolar para procesar las transacciones y liberar los recursos
+
+[33mcommit 57038281736547c1067ad5cfb1ea5e8d3a6b88c6[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 17:16:36 2026 -0500
+
+    se implementó la función para transferir transacciones de la lista a la cola de prioridad
+
+[33mcommit a34ae40b570df1f5572aa1e64b57cf478b712bae[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 17:14:30 2026 -0500
+
+    se añadió la función mostrar para visualizar el historial de transacciones en la lista
+
+[33mcommit 9e9bd19e89d7e243b8b5579e5bf9f4b82dd381dc[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 17:11:33 2026 -0500
+
+    se añadió la función para buscar y modificar el estado de una transacción en la lista
+
+[33mcommit b5b2b0ba3ffa9748c9ceb968d7d02f3c9d50a217[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 17:09:32 2026 -0500
+
+    se implementó la función para insertar nuevas transacciones al final de la lista
+
+[33mcommit fcf346f3a1ee4aa720297d64c9839d530f370184[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 17:07:25 2026 -0500
+
+    se implementó la función mostrar para visualizar el estado actual de la pila
+
+[33mcommit 205c25ac2d2abe907572b83a917df546c4d9f69b[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 17:05:50 2026 -0500
+
+    se implementó la función push automática para la gestión interna de tokens
+
+[33mcommit 092d89245de130aa2f30335e9dec9bca3d9b1610[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 17:03:45 2026 -0500
+
+    se añadió la función push para reinsertar tokens en la pila
+
+[33mcommit b45121334279f6c1f61ca787084cbd05231f252a[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 17:02:45 2026 -0500
+
+    se agregó la función pop para extraer los tokens y liberar la memoria
+
+[33mcommit cd5a65e4338d78af49a14bcaf3dd1ca01c97a5b5[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 16:58:07 2026 -0500
+
+    creando la funcion para inicializar la pila con los 15 tokens
+
+[33mcommit 09eebba0a3cd3a12ac32ace853221f5808b9e24f[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 16:55:03 2026 -0500
+
+    creando los punteros globales para la pila, lista, cola y el contador de ID
+
+[33mcommit 3ee08455c6479a802bec89b4c3280013de3aa2a6[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Wed May 27 16:51:09 2026 -0500
+
+    Configuración inicial y creación de estructuras NodoAutorizacion y NodoTransaccion
+
+[33mcommit 07591d6d6ab8581f0ae8ae7633740ff4e1f1a9e2[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Tue May 26 20:51:48 2026 -0500
+
+    Elimiancion de codigo de prueba commit
+
+[33mcommit 5314de6d05e3eeff32fafbcf6b81602d9cd9cf16[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Tue May 26 20:45:39 2026 -0500
+
+    Se agrego psudocodigo para cambiar procesos de Cola
+
+[33mcommit 100371a6463484d0501babd2f14f86f6b012f06e[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Tue May 26 20:43:54 2026 -0500
+
+    Se agrego psudocodigo para modificar procesos de Cola
+
+[33mcommit 6a9ac568537a52d1384bc7672914e73193424c6d[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Tue May 26 20:42:22 2026 -0500
+
+    Se agrego psudocodigo para cambiar procesos  de Pila
+
+[33mcommit 7fe056230181a5310edacf3cd62d9cc7c7d64b5f[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Tue May 26 20:40:29 2026 -0500
+
+    Se agrego psudocodigo para modificar procesos de Pila
+
+[33mcommit cf9af3e33b1725a7012420bd16b1ead7fcbdf0ac[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Tue May 26 20:36:21 2026 -0500
+
+    Psudocodigo para cambiar proceso de listas
+
+[33mcommit 95846393c1a5eda848b0da788c3ab49c5df1450b[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Tue May 26 20:10:15 2026 -0500
+
+    Modificacion de psudocodigo
+
+[33mcommit 25361aece9a80aab63edb94a7c7d85f30249047e[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Tue May 26 20:01:58 2026 -0500
+
+    Psudocodigo para agregar proceos de listas
+
+[33mcommit 9ebcb35dd09364402bb677d5144d3c749157d3e5[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Tue May 26 19:54:38 2026 -0500
+
+    Se elimino un archivo subido por accidente
+
+[33mcommit 2f7638642f59706fb67812b88f09957cf3fd5fe1[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Tue May 26 19:46:19 2026 -0500
+
+    Psudocodigo para agregar procesos listas1
+
+[33mcommit 78f73db97f6aabf33997bb68af5a2c3808242fea[m
+Author: snayder32 <61046949@continental.edu.pe>
+Date:   Tue May 26 17:41:35 2026 -0500
+
+    Update greeting in README.md
+
+[33mcommit 8207739aa844193794fd7c2ab51e2da94c054fbf[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Mon May 25 19:00:54 2026 -0500
+
+    Nuevo comando
+
+[33mcommit 97322374b502c9d05c1b3c6b527a681ff31d3b06[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Mon May 25 18:57:58 2026 -0500
+
+    Nuevo comentario
+
+[33mcommit 3eaa0be6a84b65911a226a6165abe20fa6a078ac[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Mon May 25 18:16:37 2026 -0500
+
+    Primer archivo cpp
+
+[33mcommit fad4cc089e25697c11a2b93ca1007d15632263fa[m
+Author: Carrizales Sucapuca Snayder R. <61046949@continental.edu.pe>
+Date:   Mon May 25 17:47:46 2026 -0500
+
+    first commit
