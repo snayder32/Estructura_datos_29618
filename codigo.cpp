@@ -39,3 +39,17 @@ NodoTransaccion* finalCola = NULL;
 // Este contador funciona como un generador de tickets. 
 // Empieza en 1000 y cada vez que registremos a un cliente subira a 1001, 1002, etc.
 int contadorID = 1000; 
+
+// Funciones encargadas de manejar la Pila
+
+// Esta funcion se ejecuta ni bien abre el programa para llenar el servidor con 15 tokens
+void InicializarPila() {
+    for (int i = 15; i >= 1; i--) {
+        // Usamos 'new' para pedirle al sistema que nos reserve un espacio en la memoria dinamica
+        NodoAutorizacion* nuevoToken = new NodoAutorizacion();
+        nuevoToken->idAutorizacion = i;
+        nuevoToken->siguiente = cimaPila;
+        cimaPila = nuevoToken;
+    }
+    cout << "15 tokens disponibles." << endl;
+}
