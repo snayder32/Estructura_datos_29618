@@ -53,3 +53,20 @@ void InicializarPila() {
     }
     cout << "15 tokens disponibles." << endl;
 }
+// Funcion Pop Sirve para extraer 
+// y devolver el elemento que esta en la parte superior de la pila.
+int PopAutorizacion() {
+    int tokenAsignado;
+    if (cimaPila == NULL) {
+        tokenAsignado = 0; // Si retorna 0 es porque ya no quedan tokens
+    } 
+	else {
+        NodoAutorizacion* nodoAuxiliar = cimaPila;
+        tokenAsignado = cimaPila->idAutorizacion;
+        cimaPila = cimaPila->siguiente;
+        
+        // Usamos delete para eliminar el nodo que acabamos de sacar y liberar esa memoria
+        delete nodoAuxiliar; 
+    }
+    return tokenAsignado;
+}
