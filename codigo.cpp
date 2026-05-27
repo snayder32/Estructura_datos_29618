@@ -303,3 +303,19 @@ void DesencolarYEjecutar() {
         cout << "Transaccion finalizada. Memoria liberada y token devuelto a la pila." << endl;
     }
 }
+
+// Esta funcion permite visualizar el orden de las transacciones que estan esperando ser atendidas
+void MostrarCola() {
+    if (frenteCola == NULL) {
+        cout << "La cola de espera esta vacia." << endl;
+    } 
+	else {
+        NodoTransaccion* actual = frenteCola;
+        cout << "\n COLA DE PROCESOS PENDIENTES " << endl;
+        while (actual != NULL) {
+            cout << "Prioridad: " << actual->prioridad << " | ID: " << actual->idTransaccion 
+                 << " | Cliente: " << actual->nombreCliente << " | Estado: " << actual->estado << endl;
+            actual = actual->siguiente;
+        }
+    }
+}
